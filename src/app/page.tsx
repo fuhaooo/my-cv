@@ -14,7 +14,7 @@ export default function Home() {
       <WorkExperience />
       <ProjectExperience />
       <EducationExperience />
-      <footer className="text-center text-xs text-gray-500 mt-8">
+      <footer className="text-center text-xs text-gray-500 mt-8 print:hidden">
         <p>Powered by <a href="https://github.com/snjyor" target="_blank" className="text-blue-500">snjyor</a></p>
       </footer>
     </div>

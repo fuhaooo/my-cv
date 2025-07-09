@@ -1,14 +1,14 @@
 'use client'
-import { Phone, Mail, MapPin, User } from 'lucide-react'
+import { Twitter, Mail, MapPin, User } from 'lucide-react'
 import Image from 'next/image'
 import cvPhoto from '@/public/cv-photo.png'
 import { useState, useEffect } from 'react'
 import { Config } from '@/config/config'
 
 export default function PersonalInfo() {
-    const [personalInfo, setPersonalInfo] = useState<{ name: string; phone: string; email: string; address: string; age: string; job: string; status: string }>({
+    const [personalInfo, setPersonalInfo] = useState<{ name: string; x: string; email: string; address: string; age: string; job: string; status: string }>({
         name: "",
-        phone: "",
+        x: "",
         email: "",
         address: "",
         age: "",
@@ -28,8 +28,8 @@ export default function PersonalInfo() {
                     <div className="mt-1 text-xs text-gray-600 space-y-0.5 text-center">
                         <div className="flex items-center space-x-3 justify-center">
                             <div className="flex items-center">
-                                <Phone className="w-3 h-3 mr-1" />
-                                <span>{personalInfo.phone}</span>
+                                <Twitter className="w-3 h-3 mr-1" />
+                                <span>{personalInfo.x}</span>
                             </div>
                             <div className="flex items-center">
                                 <Mail className="w-3 h-3 mr-1" />

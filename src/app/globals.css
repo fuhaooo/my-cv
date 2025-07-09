@@ -67,3 +67,36 @@ body {
     --chart-5: 340 75% 55%;
   }
 }
+
+/* 打印样式 - 彻底隐藏页眉页脚 */
+@media print {
+  @page {
+    margin: 0;
+    size: A4;
+  }
+  
+  body {
+    margin: 0;
+    padding: 15mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
+  }
+  
+  /* 隐藏页面footer */
+  footer {
+    display: none !important;
+  }
+  
+  /* 确保页面打印时背景颜色和图像能正常显示 */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  /* 优化打印布局 */
+  .shadow-\[0_0_10px_rgba\(0\,0\,0\,0\.1\)\] {
+    box-shadow: none !important;
+  }
+}
